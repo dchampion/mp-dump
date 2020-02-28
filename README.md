@@ -1,6 +1,6 @@
 # MountainProject API Consumer
 ## Summary
-The MountainProject API Consumer (MPAC) small Python program that retrieves data from the <a href=https://www.mountainproject.com/data target="_blank">MountainProject REST APIs</a> and stores the results in comma-separated text (.csv) files.
+The MountainProject API Consumer is a (MPAC) small Python program that retrieves data from the <a href=https://www.mountainproject.com/data target="_blank">MountainProject REST APIs</a> and stores the results in comma-separated text (.csv) files.
 
 ## Requirements
 To run MPAC, Python version 3+ must be installed on your computer. <i>You can download and install the latest Python version <a href=https://www.python.org/downloads target="_blank">here</a></i>.
