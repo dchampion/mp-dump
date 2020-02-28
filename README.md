@@ -1,9 +1,9 @@
 # MountainProject API Consumer
 ## Summary
-A small Python program that retrieves data from the <a href=https://www.mountainproject.com/data>Mountain Project REST APIs</a> and stores the results in comma-separated text (.csv) files.
+A small Python program that retrieves data from the <a href=https://www.mountainproject.com/data target="_blank">Mountain Project REST APIs</a> and stores the results in comma-separated text (.csv) files.
 
 ## Requirements
-To run this app, Python version 3+ must be installed on your computer. <i>You can download and install the latest Python versions <a href=https://www.python.org/downloads>here</a></i>.
+To run this app, Python version 3+ must be installed on your computer. <i>You can download and install the latest Python versions <a href=https://www.python.org/downloads target="_blank">here</a></i>.
 
 ## Install the MountainProject API Consumer
 Use one of the following methods to install the MountainProject API Consumer on your computer:
