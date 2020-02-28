@@ -1,11 +1,11 @@
-# MountainProject API Consumer
+# Mountain Project API Consumer
 ## Summary
-The MountainProject API Consumer (MPAC) is a small Python program that retrieves data from the <a href=https://www.mountainproject.com/data target="_blank">MountainProject REST APIs</a> and stores the results in comma-separated text (.csv) files.
+The Mountain Project API Consumer (MPAC) is a small Python program that retrieves data from the <a href=https://www.mountainproject.com/data target="_blank">Mountain Project REST APIs</a> and stores the results in comma-separated text (.csv) files.
 
 ## Requirements
 To run MPAC, Python version 3+ must be installed on your computer. <i>You can download and install the latest Python version <a href=https://www.python.org/downloads target="_blank">here</a></i>.
 
-## Install the MountainProject API Consumer
+## Install the Mountain Project API Consumer
 Use one of the following methods to install MPAC on your computer:
 * If Git is installed, navigate to a clean directory on your file system and type <code>git clone https<nolink>://github.com/dchampion/mp-dump.git</code>. This will install MPAC into a subdirectory called <code>mp-dump</code>.
 
@@ -28,12 +28,12 @@ To avoid polluting your global Python environment with the dependencies required
 
     * Type <code>pip install -r requirements.txt</code>
 
-With the successful completion of these three steps, you should be ready to consume the MountainProject REST APIs.
+With the successful completion of these three steps, you should be ready to consume the Mountain Project REST APIs.
 
 ## Run the MountainProject API Consumer
 Type <code>python mp.py</code> to display a comprehensive help page, including examples, for using MPAC.
 
-<b>IMPORTANT:</b> You will need to supply a valid MountainProject-supplied user key to execute any and all requests with MPAC (the key used in the examples will not work). To get your private key, go to the <a href=https://www.mountainproject.com/data>MountainProject API page</a>, and click the link <code>Sign up or log in to get your key</code>.
+<b>IMPORTANT:</b> You will need to supply a valid Mountain Project-supplied user key to execute any and all requests with MPAC (the key used in the examples will not work). To get your private key, go to the <a href=https://www.mountainproject.com/data>Mountain Project API page</a>, and click the link <code>Sign up or log in to get your key</code>.
 
 A successful MPAC command will display the message <code>MPAC ran successfully</code>. The requested information will be retrieved and stored in one of four .csv files, depending on the type of information requested.
 
