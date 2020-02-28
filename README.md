@@ -25,7 +25,9 @@ To avoid polluting your global Python installation with the dependencies require
 With the successful completion of these three steps, you should be ready to consume the Mountain Project REST APIs.
 
 ## Run the Mountain Project API Consumer
-Type <code>python mp.py</code> to display comprehensive instructions for using the app.
+Type <code>python mp.py</code> to display a help screen, with examples, for using the app.
+
+<b>IMPORTANT:</b> You will need to supply a valid Mountain Project-supplied user key to execute any and all requests with this app (the key used in the examples will not work). To get your private key, go to the <a href=https://www.mountainproject.com/data>Mountain Project API page</a>, and click the link <i>Sign up or log in to get your key</i>.
 
 If the app is successful in retrieving the requested information, it will silently return and store the results in one of four .csv files, depending on the type of information requested.
 
