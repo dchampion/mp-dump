@@ -20,7 +20,6 @@ def main():
                 printJSON(resp.json())
             else:
                 data = json.loads(json.dumps(resp.json()))
-                printJSON(data)
                 toCSV(sys.argv[1], data)
 
 def buildURL(args):
