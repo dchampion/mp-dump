@@ -16,7 +16,7 @@ def main():
             resp = requests.get(url)
         
             if resp.status_code != 200:
-                print('{}'.format(url) + ' returned status code ' + str(resp.status_code))
+                print(url + ' returned status code ' + str(resp.status_code))
                 printJSON(resp.json())
             else:
                 data = json.loads(json.dumps(resp.json()))
