@@ -1,7 +1,6 @@
 import sys
 import requests
 import json
-import csv
 from pandas import json_normalize
 
 def main():
