@@ -3,7 +3,9 @@
 The Mountain Project API Consumer (MPAC) is a small Python program that retrieves data from the <a href=https://www.mountainproject.com/data target="_blank">Mountain Project REST APIs</a> and stores the results in comma-separated text (.csv) files.
 
 ## Requirements
-To run MPAC, Python version 3+ must be installed on your computer. <i>You can download and install the latest Python version <a href=https://www.python.org/downloads target="_blank">here</a></i>.
+To run MPAC, Python version 3+ must be installed on your computer.
+
+To check if Python is already installed on your computer, and if so to verify you have version 3 or greater, open a terminal window (e.g. <code>cmd</code> in Windows, <code>bash</code> in Linux, or <code>Terminal</code> in MacOS) and type <code>python --version</code>. If the version displayed is less than 3, or you receive an error, download and install the latest Python version <a href=https://www.python.org/downloads target="_blank">here</a></i>.
 
 ## Install the Mountain Project API Consumer
 Use one of the following methods to install MPAC on your computer:
@@ -11,18 +13,20 @@ Use one of the following methods to install MPAC on your computer:
 
 * Alternatively, if <code>Git</code> is not installed, or you do not wish to use it, click the <code>Clone or download</code> button on this page to download and extract a zipped version of MPAC into a clean file system directory.
 
-## Set Up a (Virtual) Environment
-To avoid polluting your global Python environment with the dependencies required by MPAC, set up and activate a virtual environment.
+## Set Up a Virtual Environment
+To avoid polluting your global Python environment with the dependencies required by MPAC, set up and activate a virtual environment. Execute all of the following commands from a command-line prompt in the directory into which you cloned/installed MPAC.
 
 * Install your virtual environment:
 
-    * From the directory into which you cloned/installed MPAC, type <code>python -m venv .venv</code>
+    * If using <code>cmd</code> (Windows) or <code>bash</code> (Linux), type <code>python -m venv .venv</code>
+
+    * If using <code>Terminal</code> (MacOS), type <code>python3 -m venv .venv</code>
 
 * Activate your virtual environment:
 
-    * If using a Unix-based shell like <code>bash</code>, or a MacOS terminal, type <code>source .venv/Scripts/activate</code>
+    * If using <code>cmd</code> (Windows), type <code>".venv/Scripts/activate.bat"</code> (you must include the double-quotes for this command to work).
 
-    * If using a Windows-based shell like <code>cmd</code> or <code>PowerShell</code>, type <code>".venv/Scripts/activate.bat"</code> (you must include the double-quotes for this command to work in a Windows-based shell).
+    * If using <code>bash</code> (Linux) or <code>Terminal</code> (MacOS), type <code>source .venv/bin/activate</code>
 
 * Install the MPAC dependencies into your virtual environment:
 
