@@ -90,27 +90,27 @@ Results are stored in one of four .csv files, depending on the value of the firs
   todos       mp-member-todos.csv
   routes      mp-routes.csv\n
 USAGE: (for member-specific information)\n
-  $ python mp-dump.py member|ticks|todos member@domain.com member-key\n
+  $ python mp_dump.py member|ticks|todos member@domain.com member-key\n
   where member|ticks|todos is the type of information you want (specify only one at a time),
   member@domain.com is the email address to which the desired mountainproject member is registered, and
   member-key is the mountainproject-assigned private key associated with the member\'s email address (see API docs).\n
 EXAMPLE:\n
-  $ python mp-dump.py member me@gmail.com 13258-2f62370fe45c3896e8d1500f4777bd68\n
+  $ python mp_dump.py member me@gmail.com 13258-2f62370fe45c3896e8d1500f4777bd68\n
   The above command retrieves information about the member registered to me@gmail.com.\n
 USAGE: (for route-specific information)\n
-  $ python mp-dump.py routes routeId1 [routeId2...] member-key\n
+  $ python mp_dump.py routes routeId1 [routeId2...] member-key\n
   where routeId1 [routeId2...] is a list of one or more route IDs for which to retrieve information, and
   member-key is a valid mountainproject-assigned private key (see API docs).\n
 EXAMPLE: (route list)\n
-  $ python mp-dump.py routes 105835842 105742085 13258-2f62370fe45c3896e8d1500f4777bd68\n
+  $ python mp_dump.py routes 105835842 105742085 13258-2f62370fe45c3896e8d1500f4777bd68\n
   The above command retrieves information specific to route IDs 105835842 and 105742085.\n
   For information about all routes within a 30-mile radius of a geographic location, use the following convention:\n
-  $ python mp-dump.py routes lat lon member-key\n
+  $ python mp_dump.py routes lat lon member-key\n
   where lat is the geographic latitude,
   lon is the geographic longitude, and
   member-key is a valid mountainproject-assigned private key (see API docs).\n
 EXAMPLE: (lat-lon)\n
-  $ python mp-dump.py routes 40.03 -105.25 13258-2f62370fe45c3896e8d1500f4777bd68\n
+  $ python mp_dump.py routes 40.03 -105.25 13258-2f62370fe45c3896e8d1500f4777bd68\n
   The above command retrieves information about routes within a 30-mile radius of the specified lat-lon.
 ''')
 
