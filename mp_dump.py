@@ -8,7 +8,7 @@ def main():
     if len(sys.argv) < 4:
         usage()
     else:
-        url = buildURL(sys.argv)
+        url = build_url(sys.argv)
         if len(url) == 0:
             usage()
         else:
@@ -16,13 +16,13 @@ def main():
 
             if resp.status_code != 200:
                 print(url + ' returned status code ' + str(resp.status_code))
-                printJSON(resp.json())
+                print_json(resp.json())
             else:
                 data = json.loads(json.dumps(resp.json()))
                 toCSV(sys.argv[1], data)
                 print('MPAC ran successfully')
 
-def buildURL(args):
+def build_url(args):
     url, path = '', ''
     if args[1] == 'member':
         path = '/get-user?email={}&key={}'.format(args[2], args[3])
@@ -31,11 +31,11 @@ def buildURL(args):
     elif args[1] == 'todos':
         path = '/get-to-dos?email={}&key={}'.format(args[2], args[3])
     elif args[1] == 'routes':
-        if latLon(args):
+        if lat_lon(args):
             path = '/get-routes-for-lat-lon?lat={}&lon={}&key={}'.format(args[2], args[3], args[4])
         else:
-            routeIds = buildIdString(args)
-            memberKey = getMemberKey(args)
+            routeIds = build_id_str(args)
+            memberKey = get_member_key(args)
             if len(routeIds) > 0 and len(memberKey) > 0:
                 path = '/get-routes?routeIds={}&key={}'.format(routeIds, memberKey)
 
@@ -43,18 +43,17 @@ def buildURL(args):
         url = 'https://www.mountainproject.com/data' + path
     return url
 
-def latLon(args):
+def lat_lon(args):
     return ('.' in args[2] or '.' in args[3]) and (len(args) == 5)
 
-def buildIdString(args):
+def build_id_str(args):
     ids = ''
     args = args[2:-1]
     for arg in args:
         ids += arg + ','
-    ids.rstrip(',')
-    return ids
+    return ids.rstrip(',')
 
-def getMemberKey(args):
+def get_member_key(args):
     key = args[-1:]
     return key[0]
 
@@ -68,20 +67,20 @@ def toCSV(method, input):
     elif method == 'routes':
         json_normalize(input, 'routes').to_csv('mp-routes.csv', index=False)
 
-def printJSON(input):
+def print_json(input):
     for item in input.items():
         if isinstance(item[1], dict):
             print('{}: '.format(item[0]))
-            printJSON(item[1])
+            print_json(item[1])
         elif isinstance(item[1], list):
             for item in item[1]:
                 if isinstance(item, dict):
-                    printJSON(item)
+                    print_json(item)
         else:
             print('{}: {}'.format(item[0], item[1]))
 
 def usage():
-    print("""
+    print('''
 Use this program to retrieve member- or route-specific information from mountainproject.com.
 Results are stored in one of four .csv files, depending on the value of the first parameter; i.e.\n
   Parameter   Filename
@@ -112,7 +111,8 @@ EXAMPLE: (route list)\n
   member-key is a valid mountainproject-assigned private key (see API docs).\n
 EXAMPLE: (lat-lon)\n
   $ python mp-dump.py routes 40.03 -105.25 13258-2f62370fe45c3896e8d1500f4777bd68\n
-  The above command retrieves information about routes within a 30-mile radius of the specified lat-lon.""")
+  The above command retrieves information about routes within a 30-mile radius of the specified lat-lon.
+''')
 
 if __name__ == '__main__':
     main()

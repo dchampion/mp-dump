@@ -35,7 +35,7 @@ To avoid polluting your global Python environment with the dependencies required
 With the successful completion of these three steps, you should be ready to consume the Mountain Project REST APIs.
 
 ## Run the Mountain Project API Consumer
-Type <code>python mp-dump.py</code> to display a comprehensive help page, including examples, for using MPAC.
+Type <code>python mp_dump.py</code> to display a comprehensive help page, including examples, for using MPAC.
 
 <b>IMPORTANT:</b> You will need to supply a valid Mountain Project-supplied user key to execute any and all requests with MPAC (the key used in the examples will not work). To get your private key, go to the <a href=https://www.mountainproject.com/data>Mountain Project API page</a>, and click the link <code>Sign up or log in to get your key</code>.
 
