@@ -5,7 +5,7 @@ The Mountain Project API Consumer is a small Python program that retrieves data 
 ## Requirements
 To run this program, Python 3+ must be installed on your computer.
 
-To check if Python is installed on your computer, and if so to verify you have version 3 or greater, open a terminal window (e.g. <code>cmd</code> in Windows, <code>bash</code> in Linux, or <code>Terminal</code> in MacOS) and type <code>python --version</code>. If the version displayed is less than 3, or you receive an error, download and install the latest Python version <a href=https://www.python.org/downloads target="_blank">here</a></i>.
+To check if Python is installed on your computer, and if so to verify you have version 3 or greater, open a terminal window (e.g. <code>cmd</code> in Windows or <code>bash</code> in Linux) and type <code>python --version</code> (if using <code>Terminal</code> in MacOS, type <code>python3 --version</code>).
 
 ## Install the Mountain Project API Consumer
 Use one of the following methods to install the Mountain Project API Consumer on your computer:
